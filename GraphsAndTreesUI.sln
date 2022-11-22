@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.3.32825.248
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GraphsAndTreesUI", "GraphsAndTreesUI\GraphsAndTreesUI.csproj", "{282D195B-3C52-420C-974B-BFD21D9F5FDC}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Elementos de la solución", "Elementos de la solución", "{49AD6BC0-1850-4F41-A1BD-6D091960C042}"
+	ProjectSection(SolutionItems) = preProject
+		C:\Users\Nitro 5\source\repos\ConsoleApp1\Graphs\Graph.cs = C:\Users\Nitro 5\source\repos\ConsoleApp1\Graphs\Graph.cs
+		C:\Users\Nitro 5\source\repos\ConsoleApp1\ShortestPath\Node1.cs = C:\Users\Nitro 5\source\repos\ConsoleApp1\ShortestPath\Node1.cs
+		C:\Users\Nitro 5\source\repos\ConsoleApp1\ShortestPath\Path.cs = C:\Users\Nitro 5\source\repos\ConsoleApp1\ShortestPath\Path.cs
+		C:\Users\Nitro 5\source\repos\ConsoleApp1\ShortestPath\Program.cs = C:\Users\Nitro 5\source\repos\ConsoleApp1\ShortestPath\Program.cs
+		C:\Users\Nitro 5\source\repos\ConsoleApp1\Graphs\Vertex.cs = C:\Users\Nitro 5\source\repos\ConsoleApp1\Graphs\Vertex.cs
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{282D195B-3C52-420C-974B-BFD21D9F5FDC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{282D195B-3C52-420C-974B-BFD21D9F5FDC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{282D195B-3C52-420C-974B-BFD21D9F5FDC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{282D195B-3C52-420C-974B-BFD21D9F5FDC}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {E21AFB81-E0B8-47A3-A010-E28DAC33C314}
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,417 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d"
+		Width="750"
+		SizeToContent="Height"
+        x:Class="GraphsAndTreesUI.MainWindow"
+        Title="GraphsAndTreesUI"
+		Background="#101820"
+		ExtendClientAreaToDecorationsHint="True"
+		ExtendClientAreaChromeHints="NoChrome"
+		ExtendClientAreaTitleBarHeightHint="-1"
+		WindowStartupLocation="CenterScreen">
+	<Grid>
+		<StackPanel>
+			<Grid Name="U1"
+				  IsVisible="True"
+				  RowDefinitions="Auto,*,Auto">
+				<Grid Grid.Row="1"
+					  Height="110"
+						ColumnDefinitions="*">
+					<Label Background="BlueViolet"
+							VerticalAlignment="Center"
+							HorizontalAlignment="Center"
+							FontSize="60" Foreground="#101820"
+							FontWeight="Black">
+						C# PRACTICES
+					</Label>
+				</Grid>
+			</Grid>
+
+			<Grid Grid.Row="1"
+				  ColumnDefinitions="*,230,230">
+				<Button Name="TreeButton"
+						Grid.Column="0"
+						Background="BlueViolet"
+						Foreground="Black"
+						FontSize="40"
+						FontWeight="Black"
+						HorizontalAlignment="Left"
+						Click="Button1_Tree"
+						
+						>
+					TREES
+
+				</Button>
+				<Button Name="GraphButton"
+						Grid.Column="2"
+						Background="BlueViolet"
+						Foreground="Black"
+						FontSize="40"
+						FontWeight="Bold"
+						HorizontalAlignment="Right"
+						Click="Button2_Graph"
+						>
+					GRAPHS
+				</Button>
+
+				<Button Name="ShortestPath"
+						Grid.Column="1"
+						Background="BlueViolet"
+						Foreground="Black"
+						FontSize="40"
+						FontWeight="Bold"
+						HorizontalAlignment="Left"
+						VerticalAlignment="Bottom"
+						Click="Button3_Shortest"
+	
+						>
+					ShortestP
+				</Button>
+				
+			</Grid>
+
+			<Grid Name="U2"
+				  IsVisible="False"
+				  RowDefinitions="Auto,*,Auto"
+				>
+				<Grid Grid.Row="0"
+					  Height="110"
+					  ColumnDefinitions="*"
+					>
+					<Label Background="BlueViolet"
+							VerticalAlignment="Center"
+							HorizontalAlignment="Center"
+							FontSize="60" Foreground="#101820"
+							FontWeight="Black">
+						TREES
+					</Label>
+					<Button Grid.Row="0"
+							Width="176"
+								Background="BlueViolet"
+								Foreground="Black"
+								FontSize="30"
+								FontWeight="Black"
+								HorizontalContentAlignment="Center"
+								Click="backTree2">
+						Back
+					</Button>
+				</Grid>
+				<Grid Grid.Row="1"
+					  ColumnDefinitions="*,Auto,5,Auto,*">
+					<Grid Grid.Column="1"
+					  RowDefinitions="Auto, 5, Auto, 5, Auto">
+						<Button Grid.Row="0"
+								Width="176"
+								Background="BlueViolet"
+								Foreground="Black"
+								FontSize="30"
+								FontWeight="Black"
+								HorizontalContentAlignment="Center"
+								Click="addNode"
+								>
+							Add Node	
+						</Button>
+						<Button Grid.Row="2"
+								Width="200"
+								Background="BlueViolet"
+								Foreground="Black"
+								FontSize="30"
+								FontWeight="Black"
+								HorizontalContentAlignment="Center"
+								Click="removeNode"
+								>
+							Delete Node
+						</Button>
+
+						<Button	Grid.Row="4"
+								Width="300"
+								Background="BlueViolet"
+								Foreground="Black"
+								FontSize="30"
+								FontWeight="Black"
+								HorizontalContentAlignment="Center"
+								Click="orders"
+								>	
+						Tree Traversals
+									
+						</Button>	
+					</Grid>
+					<Grid Grid.Column="3"
+							RowDefinitions="Auto, 50, Auto, 5, Auto">
+						<TextBox Name="remNodeNum"
+							    Grid.Row="2"
+								Width="176"
+								Height="50"
+								BorderBrush="BlueViolet"
+								BorderThickness="2"
+								Background="#101820"
+								Foreground="BlueViolet"
+								Watermark="Node"
+								TextAlignment="Center"
+								FontSize="30"/>
+						
+						
+					</Grid>
+					
+					
+				</Grid>
+				
+			</Grid>
+			<Grid Name="U3"
+		  IsVisible="False"
+		  RowDefinitions="Auto,*,Auto">
+				<Grid Grid.Row="0"
+					  Height="110"
+					ColumnDefinitions="*">
+					<Label Background="BlueViolet"
+							VerticalAlignment="Center"
+							HorizontalAlignment="Center"
+							FontSize="40"
+							Foreground="Black"
+							FontWeight="Bold">
+						GRAPHS 
+					</Label>
+				</Grid>
+				<Grid Grid.Row="1"
+					  RowDefinitions="Auto, 10, Auto, 10, Auto"
+						>
+					<Button		Grid.Row="0"
+								Width="250"
+								Background="BlueViolet"
+								Foreground="Black"
+								FontSize="30"
+								FontWeight="Black"
+								HorizontalContentAlignment="Center"
+								HorizontalAlignment="Left"
+								Click="addEdges1">
+						Add Edges
+					</Button>
+
+					<Button Grid.Row="2"
+							Width="250"
+							Background="BlueViolet"
+							Foreground="Black"
+							FontSize="30"
+							FontWeight="Black"
+							HorizontalContentAlignment="Center"
+							HorizontalAlignment="Left"
+							Click="addVertex1"
+							>
+						Add Vertex
+						
+					</Button>
+					<Button Grid.Row="4"
+							Width="250"
+							Background="BlueViolet"
+							Foreground="Black"
+							FontSize="30"
+							FontWeight="Black"
+							HorizontalContentAlignment="Center"
+							HorizontalAlignment="Left"
+							Click="deleteVertex1"
+							>
+						Delete Vertex
+					</Button>
+					<Button Grid.Row="0"
+							
+							Width="250"
+							Background="BlueViolet"
+							Foreground="Black"
+							FontSize="30"
+							FontWeight="Black"
+							HorizontalContentAlignment="Center"
+							HorizontalAlignment="Right"
+							Click="deleteEdges1"
+							>
+							Remove Edge
+
+					</Button>
+
+					<Button Grid.Row="2"	
+						Width="250"
+						Background="BlueViolet"
+						Foreground="Black"
+						FontSize="30"
+						FontWeight="Black"
+						HorizontalContentAlignment="Center"
+						HorizontalAlignment="Right"
+						Click="bfs1">
+						BFS/DFS 
+					</Button>
+
+					<Button Grid.Row="6"	
+							Width="250"
+							Background="BlueViolet"
+							Foreground="Black"
+							FontSize="30"
+							FontWeight="Black"
+							HorizontalContentAlignment="Center"
+							HorizontalAlignment="Right"
+							Click="printMatrix">
+						 Generate Graph
+
+					</Button>
+
+					<Button Grid.Row="0"
+							Width="250"
+							Background="BlueViolet"
+							Foreground="Black"
+							FontSize="29"
+							FontWeight="Black"
+							HorizontalContentAlignment="Center"
+							HorizontalAlignment="Center"
+							Click="generateMatrix">
+						 Generate Matrix
+					</Button>
+				</Grid>	
+				
+			</Grid>
+
+		<Grid/>
+			<Grid Name=" U4"
+		  IsVisible="False"
+		  RowDefinitions="Auto,*,Auto">
+				<Grid	Grid.Row="0"
+						Height="110"
+					    ColumnDefinitions="*">
+					<Label Background="BlueViolet"
+							VerticalAlignment="Center"
+							HorizontalAlignment="Center"
+							FontSize="40"
+							Foreground="Black"
+							FontWeight="Bold">
+						SHORTEST
+					</Label>
+					
+					</Grid>
+				<Grid	Grid.Row="1"
+					  RowDefinitions="Auto, 10, Auto, 10, Auto">
+					<Button		Grid.Row="0"
+								Width="500"
+								Background="BlueViolet"
+								Foreground="Black"
+								FontSize="30"
+								FontWeight="Black"
+								HorizontalContentAlignment="Center"
+								HorizontalAlignment="Center"
+								Click="generateShort">	
+						Generate Shortest Path
+					</Button>
+
+					<Button Grid.Row="2"
+							Width="500"
+							Background="BlueViolet"
+							Foreground="Black"
+							FontSize="30"
+							FontWeight="Black"
+							HorizontalContentAlignment="Center"
+							HorizontalAlignment="Center"
+							Click="backShort">
+						Back
+					</Button>
+				</Grid>
+			</Grid>	
+			
+		</StackPanel>
+		<Grid IsVisible="False"
+			  RowDefinitions="*, Auto"
+			  Name="RES"
+			  Width="600"
+			  Height="310"
+			  Background="#0c1115"
+			  HorizontalAlignment="Center"
+			  VerticalAlignment="Center">
+
+			<Button Grid.Row="2"
+					Name="Stree"
+								Width="200"
+								Background="BlueViolet"
+								Foreground="Black"
+								FontSize="30"
+								FontWeight="Black"
+								HorizontalAlignment="Center"
+								HorizontalContentAlignment="Center"
+						Click="openImage">
+				Show Tree
+				
+			</Button>
+
+			<Button Name="BackTree"
+					Grid.Row="2"
+					Width="100"
+					Background="BlueViolet"
+					Foreground="Black"
+					FontSize="30"
+					FontWeight="Black"
+					HorizontalAlignment="Left"
+					HorizontalContentAlignment="Center"
+					Click="backTree"
+					>
+				Back
+				
+			</Button>
+			<Button	Name="BackGraph"
+					Grid.Row="2"
+					Width="100"
+					Background="BlueViolet"
+					Foreground="Black"
+					FontSize="30"
+					FontWeight="Black"
+					HorizontalAlignment="Left"
+					HorizontalContentAlignment="Center"
+					Click="backGraph"
+					>
+				Back
+
+			</Button>
+			<Grid Name="SNT"
+				  IsVisible="False"
+				  Grid.Row="0">
+				<TextBlock Name="SNTR"
+						   Foreground="#FEE715"
+						   FontSize="40"
+						   FontWeight="Black"
+						   HorizontalAlignment="Center"
+						   VerticalAlignment="Center"
+						   TextAlignment="Center">
+				</TextBlock>
+			</Grid>
+			<Grid Name="PT"
+				  IsVisible="False"
+				  Grid.Row="0"
+				  RowDefinitions="Auto, Auto, Auto, Auto">
+				<TextBlock Name="PTR2"
+						   Grid.Row="1"
+						   Foreground="BlueViolet"
+						   FontSize="25"
+						   FontWeight="Black"
+						   HorizontalAlignment="Center"
+						   VerticalAlignment="Center"
+						   TextAlignment="Center">
+				</TextBlock>
+				<TextBlock Name="PTR3"
+						   Grid.Row="2"
+						   Foreground="BlueViolet"
+						   FontSize="25"
+						   FontWeight="Black"
+						   HorizontalAlignment="Center"
+						   VerticalAlignment="Center"
+						   TextAlignment="Center">
+				</TextBlock>
+				<TextBlock Name="PTR4"
+						   Grid.Row="4"
+						   Foreground="BlueViolet"
+						   FontSize="25"
+						   FontWeight="Black"
+						   HorizontalAlignment="Center"
+						   VerticalAlignment="Center"
+						   TextAlignment="Center">
+				</TextBlock>
+			</Grid>
+			</Grid>
+	</Grid>
+
+</Window>
